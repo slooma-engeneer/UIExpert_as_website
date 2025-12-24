@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Report</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/analyze.css">
+    <script src="./js/notes.js" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="glass-panel">
+            <div class="header">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M12 8H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>Accessibility Report</span>
+                </div>
+                <div class="window-controls">
+                    <button class="window-btn close-btn" title="Close" id="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-card violations">
+                    <div class="stat-label">Violations</div>
+                    <div class="stat-value" id="violations-count">0</div>
+                </div>
+                <div class="stat-card passes">
+                    <div class="stat-label">Passes</div>
+                    <div class="stat-value" id="passes-count">0</div>
+                </div>
+                <div class="stat-card incomplete">
+                    <div class="stat-label">Incomplete</div>
+                    <div class="stat-value" id="incomplete-count">0</div>
+                </div>
+                <div class="stat-card inapplicable">
+                    <div class="stat-label">Inapplicable</div>
+                    <div class="stat-value" id="inapplicable-count">0</div>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <span class="filter-label">Filter by severity:</span>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="critical">Critical</button>
+                <button class="filter-btn" data-filter="serious">Serious</button>
+                <button class="filter-btn" data-filter="moderate">Moderate</button>
+                <button class="filter-btn" data-filter="minor">Minor</button>
+            </div>
+
+            <div class="content-area" id="issues-container">
+                <div class="empty-state">
+                    <div class="empty-icon">🔍</div>
+                    <div class="empty-title">No Issues Found</div>
+                    <div class="empty-description">Run an accessibility scan to see results</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="glow-container">
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+            <div class="glow glow-3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

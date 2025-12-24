@@ -1,0 +1,3137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIExpert</title>
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/icons.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="./js/mainstyle.js" defer></script>
+    <script src="./js/moveable.js" defer></script>
+    <script src="./js/axe.min.js" defer></script>
+    <script src="./js/control.js" defer></script>
+</head>
+
+<body>
+    <div class="icons-container" id="iconsGrid">
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="iconSearch" class="search-input" placeholder="Search icons..."
+                    autocomplete="off">
+            </div>
+            <div class="search-results-count" id="searchCount"></div>
+        </div>
+        <div class="icons-grid" id="icons_inside_grid">
+            <!-- UI & Navigation Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-home" title="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-bars" title="Menu">
+                <i class="fas fa-bars"></i>
+                <span>Menu</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-times" title="Close">
+                <i class="fas fa-times"></i>
+                <span>Close</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-search" title="Search">
+                <i class="fas fa-search"></i>
+                <span>Search</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-arrow-left" title="Arrow Left">
+                <i class="fas fa-arrow-left"></i>
+                <span>Arrow Left</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-arrow-right"
+                title="Arrow Right">
+                <i class="fas fa-arrow-right"></i>
+                <span>Arrow Right</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-arrow-up" title="Arrow Up">
+                <i class="fas fa-arrow-up"></i>
+                <span>Arrow Up</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-arrow-down" title="Arrow Down">
+                <i class="fas fa-arrow-down"></i>
+                <span>Arrow Down</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-chevron-left"
+                title="Chevron Left">
+                <i class="fas fa-chevron-left"></i>
+                <span>Chevron Left</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-chevron-right"
+                title="Chevron Right">
+                <i class="fas fa-chevron-right"></i>
+                <span>Chevron Right</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-chevron-up" title="Chevron Up">
+                <i class="fas fa-chevron-up"></i>
+                <span>Chevron Up</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-chevron-down"
+                title="Chevron Down">
+                <i class="fas fa-chevron-down"></i>
+                <span>Chevron Down</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-plus" title="Plus">
+                <i class="fas fa-plus"></i>
+                <span>Plus</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-minus" title="Minus">
+                <i class="fas fa-minus"></i>
+                <span>Minus</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-cog" title="Settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-filter" title="Filter">
+                <i class="fas fa-filter"></i>
+                <span>Filter</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-sort" title="Sort">
+                <i class="fas fa-sort"></i>
+                <span>Sort</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-list" title="List">
+                <i class="fas fa-list"></i>
+                <span>List</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-th" title="Grid">
+                <i class="fas fa-th"></i>
+                <span>Grid</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-th-list" title="List View">
+                <i class="fas fa-th-list"></i>
+                <span>List View</span>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-facebook" title="Facebook">
+                <i class="fab fa-facebook"></i>
+                <span>Facebook</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-twitter" title="Twitter">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-instagram"
+                title="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-linkedin" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-youtube" title="YouTube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-github" title="GitHub">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-telegram" title="Telegram">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-discord" title="Discord">
+                <i class="fab fa-discord"></i>
+                <span>Discord</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-reddit" title="Reddit">
+                <i class="fab fa-reddit"></i>
+                <span>Reddit</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-pinterest"
+                title="Pinterest">
+                <i class="fab fa-pinterest"></i>
+                <span>Pinterest</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-snapchat" title="Snapchat">
+                <i class="fab fa-snapchat"></i>
+                <span>Snapchat</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-tiktok" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+            </div>
+
+            <!-- Business Icons -->
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-briefcase"
+                title="Briefcase">
+                <i class="fas fa-briefcase"></i>
+                <span>Briefcase</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-building"
+                title="Building">
+                <i class="fas fa-building"></i>
+                <span>Building</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-chart-bar"
+                title="Chart Bar">
+                <i class="fas fa-chart-bar"></i>
+                <span>Chart Bar</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-chart-line"
+                title="Chart Line">
+                <i class="fas fa-chart-line"></i>
+                <span>Chart Line</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-chart-pie"
+                title="Chart Pie">
+                <i class="fas fa-chart-pie"></i>
+                <span>Chart Pie</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-dollar-sign"
+                title="Dollar">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Dollar</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-euro-sign" title="Euro">
+                <i class="fas fa-euro-sign"></i>
+                <span>Euro</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-pound-sign"
+                title="Pound">
+                <i class="fas fa-pound-sign"></i>
+                <span>Pound</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-yen-sign" title="Yen">
+                <i class="fas fa-yen-sign"></i>
+                <span>Yen</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fab fa-bitcoin" title="Bitcoin">
+                <i class="fab fa-bitcoin"></i>
+                <span>Bitcoin</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-credit-card"
+                title="Credit Card">
+                <i class="fas fa-credit-card"></i>
+                <span>Credit Card</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-university" title="Bank">
+                <i class="fas fa-university"></i>
+                <span>Bank</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-handshake"
+                title="Handshake">
+                <i class="fas fa-handshake"></i>
+                <span>Handshake</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-trophy" title="Trophy">
+                <i class="fas fa-trophy"></i>
+                <span>Trophy</span>
+            </div>
+            <!-- <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-target" title="Target">
+                <i class="fas fa-target"></i>
+                <span>Target</span>
+            </div> -->
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-rocket" title="Rocket">
+                <i class="fas fa-rocket"></i>
+                <span>Rocket</span>
+            </div>
+
+            <!-- Media Icons -->
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-image" title="Image">
+                <i class="fas fa-image"></i>
+                <span>Image</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-video" title="Video">
+                <i class="fas fa-video"></i>
+                <span>Video</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-music" title="Music">
+                <i class="fas fa-music"></i>
+                <span>Music</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-film" title="Film">
+                <i class="fas fa-film"></i>
+                <span>Film</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-camera" title="Camera">
+                <i class="fas fa-camera"></i>
+                <span>Camera</span>
+            </div>
+
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-microphone"
+                title="Microphone">
+                <i class="fas fa-microphone"></i>
+                <span>Microphone</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-headphones"
+                title="Headphones">
+                <i class="fas fa-headphones"></i>
+                <span>Headphones</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-volume-up"
+                title="Volume Up">
+                <i class="fas fa-volume-up"></i>
+                <span>Volume Up</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-volume-down"
+                title="Volume Down">
+                <i class="fas fa-volume-down"></i>
+                <span>Volume Down</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-volume-mute" title="Mute">
+                <i class="fas fa-volume-mute"></i>
+                <span>Mute</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-play" title="Play">
+                <i class="fas fa-play"></i>
+                <span>Play</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-pause" title="Pause">
+                <i class="fas fa-pause"></i>
+                <span>Pause</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-stop" title="Stop">
+                <i class="fas fa-stop"></i>
+                <span>Stop</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-forward" title="Forward">
+                <i class="fas fa-forward"></i>
+                <span>Forward</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-backward" title="Backward">
+                <i class="fas fa-backward"></i>
+                <span>Backward</span>
+            </div>
+
+            <!-- System Icons -->
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-cogs" title="Settings">
+                <i class="fas fa-cogs"></i>
+                <span>Settings</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-wrench" title="Tools">
+                <i class="fas fa-wrench"></i>
+                <span>Tools</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-database" title="Database">
+                <i class="fas fa-database"></i>
+                <span>Database</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-server" title="Server">
+                <i class="fas fa-server"></i>
+                <span>Server</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-cloud" title="Cloud">
+                <i class="fas fa-cloud"></i>
+                <span>Cloud</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-download" title="Download">
+                <i class="fas fa-download"></i>
+                <span>Download</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-upload" title="Upload">
+                <i class="fas fa-upload"></i>
+                <span>Upload</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-file" title="File">
+                <i class="fas fa-file"></i>
+                <span>File</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-folder" title="Folder">
+                <i class="fas fa-folder"></i>
+                <span>Folder</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-folder-open"
+                title="Folder Open">
+                <i class="fas fa-folder-open"></i>
+                <span>Folder Open</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-save" title="Save">
+                <i class="fas fa-save"></i>
+                <span>Save</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-trash" title="Delete">
+                <i class="fas fa-trash"></i>
+                <span>Delete</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-edit" title="Edit">
+                <i class="fas fa-edit"></i>
+                <span>Edit</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-copy" title="Copy">
+                <i class="fas fa-copy"></i>
+                <span>Copy</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-cut" title="Cut">
+                <i class="fas fa-cut"></i>
+                <span>Cut</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-paste" title="Paste">
+                <i class="fas fa-paste"></i>
+                <span>Paste</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-undo" title="Undo">
+                <i class="fas fa-undo"></i>
+                <span>Undo</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-redo" title="Redo">
+                <i class="fas fa-redo"></i>
+                <span>Redo</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-print" title="Print">
+                <i class="fas fa-print"></i>
+                <span>Print</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-wifi" title="WiFi">
+                <i class="fas fa-wifi"></i>
+                <span>WiFi</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-bluetooth"
+                title="Bluetooth">
+                <i class="fab fa-bluetooth"></i>
+                <span>Bluetooth</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-battery-full"
+                title="Battery Full">
+                <i class="fas fa-battery-full"></i>
+                <span>Battery Full</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-battery-half"
+                title="Battery Half">
+                <i class="fas fa-battery-half"></i>
+                <span>Battery Half</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-battery-empty"
+                title="Battery Empty">
+                <i class="fas fa-battery-empty"></i>
+                <span>Battery Empty</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-signal" title="Signal">
+                <i class="fas fa-signal"></i>
+                <span>Signal</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-lock" title="Lock">
+                <i class="fas fa-lock"></i>
+                <span>Lock</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-unlock" title="Unlock">
+                <i class="fas fa-unlock"></i>
+                <span>Unlock</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-shield-alt"
+                title="Security">
+                <i class="fas fa-shield-alt"></i>
+                <span>Security</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-bug" title="Bug">
+                <i class="fas fa-bug"></i>
+                <span>Bug</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-code" title="Code">
+                <i class="fas fa-code"></i>
+                <span>Code</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-terminal" title="Terminal">
+                <i class="fas fa-terminal"></i>
+                <span>Terminal</span>
+            </div>
+
+            <!-- Additional Common Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-user" title="User">
+                <i class="fas fa-user"></i>
+                <span>User</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-users" title="Users">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-heart" title="Heart">
+                <i class="fas fa-heart"></i>
+                <span>Heart</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-star" title="Star">
+                <i class="fas fa-star"></i>
+                <span>Star</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-bookmark" title="Bookmark">
+                <i class="fas fa-bookmark"></i>
+                <span>Bookmark</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-flag" title="Flag">
+                <i class="fas fa-flag"></i>
+                <span>Flag</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-bell" title="Notification">
+                <i class="fas fa-bell"></i>
+                <span>Notification</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-envelope" title="Email">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-phone" title="Phone">
+                <i class="fas fa-phone"></i>
+                <span>Phone</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-map-marker-alt"
+                title="Location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Location</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-calendar" title="Calendar">
+                <i class="fas fa-calendar"></i>
+                <span>Calendar</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-clock" title="Time">
+                <i class="fas fa-clock"></i>
+                <span>Time</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-shopping-cart"
+                title="Shopping Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-tag" title="Tag">
+                <i class="fas fa-tag"></i>
+                <span>Tag</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-info-circle" title="Info">
+                <i class="fas fa-info-circle"></i>
+                <span>Info</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-question-circle" title="Help">
+                <i class="fas fa-question-circle"></i>
+                <span>Help</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-exclamation-triangle"
+                title="Warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Warning</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-check-circle" title="Success">
+                <i class="fas fa-check-circle"></i>
+                <span>Success</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-times-circle" title="Error">
+                <i class="fas fa-times-circle"></i>
+                <span>Error</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-eye" title="View">
+                <i class="fas fa-eye"></i>
+                <span>View</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-eye-slash" title="Hide">
+                <i class="fas fa-eye-slash"></i>
+                <span>Hide</span>
+            </div>
+
+            <!-- Communication & Contact Icons -->
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-comment" title="Comment">
+                <i class="fas fa-comment"></i>
+                <span>Comment</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-comments" title="Comments">
+                <i class="fas fa-comments"></i>
+                <span>Comments</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-share" title="Share">
+                <i class="fas fa-share"></i>
+                <span>Share</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-thumbs-up" title="Like">
+                <i class="fas fa-thumbs-up"></i>
+                <span>Like</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-thumbs-down"
+                title="Dislike">
+                <i class="fas fa-thumbs-down"></i>
+                <span>Dislike</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-reply" title="Reply">
+                <i class="fas fa-reply"></i>
+                <span>Reply</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-retweet" title="Retweet">
+                <i class="fas fa-retweet"></i>
+                <span>Retweet</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-at" title="Mention">
+                <i class="fas fa-at"></i>
+                <span>Mention</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-hashtag" title="Hashtag">
+                <i class="fas fa-hashtag"></i>
+                <span>Hashtag</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fas fa-rss" title="RSS">
+                <i class="fas fa-rss"></i>
+                <span>RSS</span>
+            </div>
+
+            <!-- E-commerce & Shopping Icons -->
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-shopping-bag"
+                title="Shopping Bag">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Shopping Bag</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-store" title="Store">
+                <i class="fas fa-store"></i>
+                <span>Store</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-receipt" title="Receipt">
+                <i class="fas fa-receipt"></i>
+                <span>Receipt</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-gift" title="Gift">
+                <i class="fas fa-gift"></i>
+                <span>Gift</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-percent"
+                title="Discount">
+                <i class="fas fa-percent"></i>
+                <span>Discount</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-tags" title="Tags">
+                <i class="fas fa-tags"></i>
+                <span>Tags</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-barcode" title="Barcode">
+                <i class="fas fa-barcode"></i>
+                <span>Barcode</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-qrcode" title="QR Code">
+                <i class="fas fa-qrcode"></i>
+                <span>QR Code</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-wallet" title="Wallet">
+                <i class="fas fa-wallet"></i>
+                <span>Wallet</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="business" data-icon="fas fa-coins" title="Coins">
+                <i class="fas fa-coins"></i>
+                <span>Coins</span>
+            </div>
+
+            <!-- Transportation Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-car" title="Car">
+                <i class="fas fa-car"></i>
+                <span>Car</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-bus" title="Bus">
+                <i class="fas fa-bus"></i>
+                <span>Bus</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-train" title="Train">
+                <i class="fas fa-train"></i>
+                <span>Train</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-plane" title="Plane">
+                <i class="fas fa-plane"></i>
+                <span>Plane</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-ship" title="Ship">
+                <i class="fas fa-ship"></i>
+                <span>Ship</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-bicycle" title="Bicycle">
+                <i class="fas fa-bicycle"></i>
+                <span>Bicycle</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-motorcycle" title="Motorcycle">
+                <i class="fas fa-motorcycle"></i>
+                <span>Motorcycle</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-taxi" title="Taxi">
+                <i class="fas fa-taxi"></i>
+                <span>Taxi</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-truck" title="Truck">
+                <i class="fas fa-truck"></i>
+                <span>Truck</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-subway" title="Subway">
+                <i class="fas fa-subway"></i>
+                <span>Subway</span>
+            </div>
+
+            <!-- Weather Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-sun" title="Sun">
+                <i class="fas fa-sun"></i>
+                <span>Sun</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-moon" title="Moon">
+                <i class="fas fa-moon"></i>
+                <span>Moon</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-cloud-sun"
+                title="Partly Cloudy">
+                <i class="fas fa-cloud-sun"></i>
+                <span>Partly Cloudy</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-cloud-rain" title="Rain">
+                <i class="fas fa-cloud-rain"></i>
+                <span>Rain</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-snowflake" title="Snow">
+                <i class="fas fa-snowflake"></i>
+                <span>Snow</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-bolt" title="Lightning">
+                <i class="fas fa-bolt"></i>
+                <span>Lightning</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-wind" title="Wind">
+                <i class="fas fa-wind"></i>
+                <span>Wind</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-thermometer-half"
+                title="Temperature">
+                <i class="fas fa-thermometer-half"></i>
+                <span>Temperature</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-umbrella" title="Umbrella">
+                <i class="fas fa-umbrella"></i>
+                <span>Umbrella</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-rainbow" title="Rainbow">
+                <i class="fas fa-rainbow"></i>
+                <span>Rainbow</span>
+            </div>
+
+            <!-- Food & Drink Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-utensils" title="Utensils">
+                <i class="fas fa-utensils"></i>
+                <span>Utensils</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-coffee" title="Coffee">
+                <i class="fas fa-coffee"></i>
+                <span>Coffee</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-wine-glass" title="Wine">
+                <i class="fas fa-wine-glass"></i>
+                <span>Wine</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-beer" title="Beer">
+                <i class="fas fa-beer"></i>
+                <span>Beer</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-pizza-slice" title="Pizza">
+                <i class="fas fa-pizza-slice"></i>
+                <span>Pizza</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-hamburger" title="Hamburger">
+                <i class="fas fa-hamburger"></i>
+                <span>Hamburger</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-apple-alt" title="Apple">
+                <i class="fas fa-apple-alt"></i>
+                <span>Apple</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-carrot" title="Carrot">
+                <i class="fas fa-carrot"></i>
+                <span>Carrot</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-ice-cream" title="Ice Cream">
+                <i class="fas fa-ice-cream"></i>
+                <span>Ice Cream</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-birthday-cake" title="Cake">
+                <i class="fas fa-birthday-cake"></i>
+                <span>Cake</span>
+            </div>
+
+            <!-- Sports & Recreation Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-football-ball"
+                title="Football">
+                <i class="fas fa-football-ball"></i>
+                <span>Football</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-basketball-ball"
+                title="Basketball">
+                <i class="fas fa-basketball-ball"></i>
+                <span>Basketball</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-baseball-ball"
+                title="Baseball">
+                <i class="fas fa-baseball-ball"></i>
+                <span>Baseball</span>
+            </div>
+            <!-- <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-tennis-ball" title="Tennis">
+                <i class="fas fa-tennis-ball"></i>
+                <span>Tennis</span>
+            </div> -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-volleyball-ball"
+                title="Volleyball">
+                <i class="fas fa-volleyball-ball"></i>
+                <span>Volleyball</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-golf-ball" title="Golf">
+                <i class="fas fa-golf-ball"></i>
+                <span>Golf</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-swimming-pool"
+                title="Swimming">
+                <i class="fas fa-swimming-pool"></i>
+                <span>Swimming</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-running" title="Running">
+                <i class="fas fa-running"></i>
+                <span>Running</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-dumbbell" title="Fitness">
+                <i class="fas fa-dumbbell"></i>
+                <span>Fitness</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-medal" title="Medal">
+                <i class="fas fa-medal"></i>
+                <span>Medal</span>
+            </div>
+
+            <!-- Medical & Health Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-heartbeat" title="Heartbeat">
+                <i class="fas fa-heartbeat"></i>
+                <span>Heartbeat</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-stethoscope"
+                title="Stethoscope">
+                <i class="fas fa-stethoscope"></i>
+                <span>Stethoscope</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-pills" title="Pills">
+                <i class="fas fa-pills"></i>
+                <span>Pills</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-syringe" title="Syringe">
+                <i class="fas fa-syringe"></i>
+                <span>Syringe</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-band-aid" title="Band Aid">
+                <i class="fas fa-band-aid"></i>
+                <span>Band Aid</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-hospital" title="Hospital">
+                <i class="fas fa-hospital"></i>
+                <span>Hospital</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-ambulance" title="Ambulance">
+                <i class="fas fa-ambulance"></i>
+                <span>Ambulance</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-user-md" title="Doctor">
+                <i class="fas fa-user-md"></i>
+                <span>Doctor</span>
+            </div>
+
+            <!-- Education & Learning Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-graduation-cap"
+                title="Education">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-book" title="Book">
+                <i class="fas fa-book"></i>
+                <span>Book</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-book-open" title="Open Book">
+                <i class="fas fa-book-open"></i>
+                <span>Open Book</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-bookmark" title="Bookmark">
+                <i class="fas fa-bookmark"></i>
+                <span>Bookmark</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-pencil-alt" title="Pencil">
+                <i class="fas fa-pencil-alt"></i>
+                <span>Pencil</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-pen" title="Pen">
+                <i class="fas fa-pen"></i>
+                <span>Pen</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-highlighter"
+                title="Highlighter">
+                <i class="fas fa-highlighter"></i>
+                <span>Highlighter</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-eraser" title="Eraser">
+                <i class="fas fa-eraser"></i>
+                <span>Eraser</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-ruler" title="Ruler">
+                <i class="fas fa-ruler"></i>
+                <span>Ruler</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-calculator" title="Calculator">
+                <i class="fas fa-calculator"></i>
+                <span>Calculator</span>
+            </div>
+
+            <!-- Nature & Animals Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-tree" title="Tree">
+                <i class="fas fa-tree"></i>
+                <span>Tree</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-leaf" title="Leaf">
+                <i class="fas fa-leaf"></i>
+                <span>Leaf</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-seedling" title="Plant">
+                <i class="fas fa-seedling"></i>
+                <span>Plant</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-mountain" title="Mountain">
+                <i class="fas fa-mountain"></i>
+                <span>Mountain</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-water" title="Water">
+                <i class="fas fa-water"></i>
+                <span>Water</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-fire" title="Fire">
+                <i class="fas fa-fire"></i>
+                <span>Fire</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-paw" title="Pet">
+                <i class="fas fa-paw"></i>
+                <span>Pet</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-dog" title="Dog">
+                <i class="fas fa-dog"></i>
+                <span>Dog</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-cat" title="Cat">
+                <i class="fas fa-cat"></i>
+                <span>Cat</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-fish" title="Fish">
+                <i class="fas fa-fish"></i>
+                <span>Fish</span>
+            </div>
+
+            <!-- Gaming & Entertainment Icons -->
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-gamepad" title="Gaming">
+                <i class="fas fa-gamepad"></i>
+                <span>Gaming</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-dice" title="Dice">
+                <i class="fas fa-dice"></i>
+                <span>Dice</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-puzzle-piece"
+                title="Puzzle">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Puzzle</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-chess" title="Chess">
+                <i class="fas fa-chess"></i>
+                <span>Chess</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-theater-masks"
+                title="Theater">
+                <i class="fas fa-theater-masks"></i>
+                <span>Theater</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-ticket-alt" title="Ticket">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Ticket</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-guitar" title="Guitar">
+                <i class="fas fa-guitar"></i>
+                <span>Guitar</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-drum" title="Drum">
+                <i class="fas fa-drum"></i>
+                <span>Drum</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-microphone-alt"
+                title="Microphone Alt">
+                <i class="fas fa-microphone-alt"></i>
+                <span>Mic Alt</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-broadcast-tower"
+                title="Broadcast">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>Broadcast</span>
+            </div>
+
+            <!-- Tools & Hardware Icons -->
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-hammer" title="Hammer">
+                <i class="fas fa-hammer"></i>
+                <span>Hammer</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-screwdriver"
+                title="Screwdriver">
+                <i class="fas fa-screwdriver"></i>
+                <span>Screwdriver</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-toolbox" title="Toolbox">
+                <i class="fas fa-toolbox"></i>
+                <span>Toolbox</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-cog" title="Gear">
+                <i class="fas fa-cog"></i>
+                <span>Gear</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-bolt" title="Bolt">
+                <i class="fas fa-bolt"></i>
+                <span>Bolt</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-plug" title="Plug">
+                <i class="fas fa-plug"></i>
+                <span>Plug</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-battery-three-quarters"
+                title="Battery 3/4">
+                <i class="fas fa-battery-three-quarters"></i>
+                <span>Battery 3/4</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-battery-quarter"
+                title="Battery 1/4">
+                <i class="fas fa-battery-quarter"></i>
+                <span>Battery 1/4</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-lightbulb"
+                title="Light Bulb">
+                <i class="fas fa-lightbulb"></i>
+                <span>Light Bulb</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-power-off" title="Power">
+                <i class="fas fa-power-off"></i>
+                <span>Power</span>
+            </div>
+
+            <!-- More Social & Brand Icons -->
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-slack" title="Slack">
+                <i class="fab fa-slack"></i>
+                <span>Slack</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-skype" title="Skype">
+                <i class="fab fa-skype"></i>
+                <span>Skype</span>
+            </div>
+            <!-- <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-zoom" title="Zoom">
+                <i class="fab fa-zoom"></i>
+                <span>Zoom</span>
+            </div> -->
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-microsoft"
+                title="Microsoft">
+                <i class="fab fa-microsoft"></i>
+                <span>Microsoft</span>
+            </div>
+
+            <!-- Education & Learning Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-graduation-cap"
+                title="Education">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-book" title="Book">
+                <i class="fas fa-book"></i>
+                <span>Book</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-book-open" title="Open Book">
+                <i class="fas fa-book-open"></i>
+                <span>Open Book</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-bookmark" title="Bookmark">
+                <i class="fas fa-bookmark"></i>
+                <span>Bookmark</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-pencil-alt" title="Pencil">
+                <i class="fas fa-pencil-alt"></i>
+                <span>Pencil</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-pen" title="Pen">
+                <i class="fas fa-pen"></i>
+                <span>Pen</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-highlighter"
+                title="Highlighter">
+                <i class="fas fa-highlighter"></i>
+                <span>Highlighter</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-eraser" title="Eraser">
+                <i class="fas fa-eraser"></i>
+                <span>Eraser</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-ruler" title="Ruler">
+                <i class="fas fa-ruler"></i>
+                <span>Ruler</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-calculator" title="Calculator">
+                <i class="fas fa-calculator"></i>
+                <span>Calculator</span>
+            </div>
+
+            <!-- Nature & Animals Icons -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-tree" title="Tree">
+                <i class="fas fa-tree"></i>
+                <span>Tree</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-leaf" title="Leaf">
+                <i class="fas fa-leaf"></i>
+                <span>Leaf</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-seedling" title="Plant">
+                <i class="fas fa-seedling"></i>
+                <span>Plant</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-mountain" title="Mountain">
+                <i class="fas fa-mountain"></i>
+                <span>Mountain</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-water" title="Water">
+                <i class="fas fa-water"></i>
+                <span>Water</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-fire" title="Fire">
+                <i class="fas fa-fire"></i>
+                <span>Fire</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-paw" title="Pet">
+                <i class="fas fa-paw"></i>
+                <span>Pet</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-dog" title="Dog">
+                <i class="fas fa-dog"></i>
+                <span>Dog</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-cat" title="Cat">
+                <i class="fas fa-cat"></i>
+                <span>Cat</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-fish" title="Fish">
+                <i class="fas fa-fish"></i>
+                <span>Fish</span>
+            </div>
+
+            <!-- Gaming & Entertainment Icons -->
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-gamepad" title="Gaming">
+                <i class="fas fa-gamepad"></i>
+                <span>Gaming</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-dice" title="Dice">
+                <i class="fas fa-dice"></i>
+                <span>Dice</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-puzzle-piece"
+                title="Puzzle">
+                <i class="fas fa-puzzle-piece"></i>
+                <span>Puzzle</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-chess" title="Chess">
+                <i class="fas fa-chess"></i>
+                <span>Chess</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-theater-masks"
+                title="Theater">
+                <i class="fas fa-theater-masks"></i>
+                <span>Theater</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-ticket-alt" title="Ticket">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Ticket</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-guitar" title="Guitar">
+                <i class="fas fa-guitar"></i>
+                <span>Guitar</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-drum" title="Drum">
+                <i class="fas fa-drum"></i>
+                <span>Drum</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-microphone-alt"
+                title="Microphone Alt">
+                <i class="fas fa-microphone-alt"></i>
+                <span>Mic Alt</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="media" data-icon="fas fa-broadcast-tower"
+                title="Broadcast">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>Broadcast</span>
+            </div>
+
+            <!-- Tools & Hardware Icons -->
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-hammer" title="Hammer">
+                <i class="fas fa-hammer"></i>
+                <span>Hammer</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-screwdriver"
+                title="Screwdriver">
+                <i class="fas fa-screwdriver"></i>
+                <span>Screwdriver</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-toolbox" title="Toolbox">
+                <i class="fas fa-toolbox"></i>
+                <span>Toolbox</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-cog" title="Gear">
+                <i class="fas fa-cog"></i>
+                <span>Gear</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-bolt" title="Bolt">
+                <i class="fas fa-bolt"></i>
+                <span>Bolt</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-plug" title="Plug">
+                <i class="fas fa-plug"></i>
+                <span>Plug</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-battery-three-quarters"
+                title="Battery 3/4">
+                <i class="fas fa-battery-three-quarters"></i>
+                <span>Battery 3/4</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-battery-quarter"
+                title="Battery 1/4">
+                <i class="fas fa-battery-quarter"></i>
+                <span>Battery 1/4</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-lightbulb"
+                title="Light Bulb">
+                <i class="fas fa-lightbulb"></i>
+                <span>Light Bulb</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="system" data-icon="fas fa-power-off" title="Power">
+                <i class="fas fa-power-off"></i>
+                <span>Power</span>
+            </div>
+
+            <!-- More Social & Brand Icons -->
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-slack" title="Slack">
+                <i class="fab fa-slack"></i>
+                <span>Slack</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-skype" title="Skype">
+                <i class="fab fa-skype"></i>
+                <span>Skype</span>
+            </div>
+            <!-- <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-zoom" title="Zoom">
+                <i class="fab fa-zoom"></i>
+                <span>Zoom</span>
+            </div> -->
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-microsoft"
+                title="Microsoft">
+                <i class="fab fa-microsoft"></i>
+                <span>Microsoft</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-google" title="Google">
+                <i class="fab fa-google"></i>
+                <span>Google</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-apple" title="Apple">
+                <i class="fab fa-apple"></i>
+                <span>Apple</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-android" title="Android">
+                <i class="fab fa-android"></i>
+                <span>Android</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-windows" title="Windows">
+                <i class="fab fa-windows"></i>
+                <span>Windows</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-linux" title="Linux">
+                <i class="fab fa-linux"></i>
+                <span>Linux</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="social" data-icon="fab fa-ubuntu" title="Ubuntu">
+                <i class="fab fa-ubuntu"></i>
+                <span>Ubuntu</span>
+            </div>
+
+            <!-- More UI Elements -->
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-expand" title="Expand">
+                <i class="fas fa-expand"></i>
+                <span>Expand</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-compress" title="Compress">
+                <i class="fas fa-compress"></i>
+                <span>Compress</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-external-link-alt"
+                title="External Link">
+                <i class="fas fa-external-link-alt"></i>
+                <span>External Link</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-link" title="Link">
+                <i class="fas fa-link"></i>
+                <span>Link</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-unlink" title="Unlink">
+                <i class="fas fa-unlink"></i>
+                <span>Unlink</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-paperclip" title="Attachment">
+                <i class="fas fa-paperclip"></i>
+                <span>Attachment</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-thumbtack" title="Pin">
+                <i class="fas fa-thumbtack"></i>
+                <span>Pin</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-map" title="Map">
+                <i class="fas fa-map"></i>
+                <span>Map</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-compass" title="Compass">
+                <i class="fas fa-compass"></i>
+                <span>Compass</span>
+            </div>
+            <div class="icon-item" draggable="true" data-category="ui" data-icon="fas fa-globe" title="Globe">
+                <i class="fas fa-globe"></i>
+                <span>Globe</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Menu Bar - Enhanced Toolbar -->
+    <div class="top-menu">
+        <!-- Text Style Toolbar -->
+        <div class="text-style-toolbar" id="text_style_toolbar">
+
+            <div class="style-group">
+                <div class="style-button" id="icons">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+
+
+            <select class="style-select Uiexpert_style fast_css" title="Font Family" id="font_family2">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Helvetica, sans-serif">Helvetica</option>
+                <option value="'Times New Roman', serif">Times New Roman</option>
+                <option value="Georgia, serif">Georgia</option>
+                <option value="Verdana, sans-serif">Verdana</option>
+                <option value="'Courier New', monospace">Courier New</option>
+                <option value="Tahoma, sans-serif">Tahoma</option>
+                <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                <option value="Impact, sans-serif">Impact</option>
+                <option value="'Lucida Console', monospace">Lucida Console</option>
+                <option value="'Lucida Sans Unicode', sans-serif">Lucida Sans Unicode</option>
+                <option value="Palatino, serif">Palatino</option>
+                <option value="Garamond, serif">Garamond</option>
+                <option value="Cambria, serif">Cambria</option>
+                <option value="Calibri, sans-serif">Calibri</option>
+                <option value="'Segoe UI', sans-serif">Segoe UI</option>
+            </select>
+
+            <select class="style-select Uiexpert_style fast_css" title="Font Size" id="font_size2">
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+                <option value="30">30</option>
+                <option value="36">36</option>
+            </select>
+
+
+            <div class="style-group">
+                <div class="style-button Uiexpert_style fast_css" title="Bold" id="font_weight2">
+                    <i class="fas fa-bold"></i>
+                </div>
+                <div class="style-button Uiexpert_style fast_css" title="Italic" id="font_style">
+                    <i class="fas fa-italic"></i>
+                </div>
+                <div class="style-button Uiexpert_style fast_css" title="Underline" id="text_decoration2">
+                    <i class="fas fa-underline"></i>
+                </div>
+            </div>
+
+            <div class="style-group">
+                <div class="style-button Uiexpert_style fast_css" id="text_align_left" title="Align Left">
+                    <i class="fas fa-align-left"></i>
+                </div>
+                <div class="style-button Uiexpert_style fast_css" id="text_align_center" title="Align Center">
+                    <i class="fas fa-align-center"></i>
+                </div>
+                <div class="style-button Uiexpert_style fast_css" id="text_align_right" title="Align Right">
+                    <i class="fas fa-align-right"></i>
+                </div>
+                <div class="style-button Uiexpert_style fast_css" id="text_align_justify" title="Justify">
+                    <i class="fas fa-align-justify"></i>
+                </div>
+            </div>
+
+            <div class="style-group color-input-group" style="width: 50px;">
+                <!-- <div class="style-button  Uiexpert_style fast_css" title="Text Color" id="font_color2">
+                    <i class="fas fa-font" style="color: #ff0000;"></i>
+                </div> -->
+                <!-- <div class="style-button" title="Background Color"> -->
+                <input type="color" class="Uiexpert_style fast_css" id="background_color2" value="#FFFFFF" style="
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                    margin-left: 7px;
+                    ">
+                <!-- <i class="fas fa-fill-drip"></i> -->
+                <!-- </div> -->
+            </div>
+
+            <div class="style-group">
+                <div class="style-button" title="Delete" id="Delete">
+                    <i class="fas fa-trash-alt" style="color: #ff0000;"></i>
+                </div>
+            </div>
+
+            <!-- <div class="style-group" id="run">
+                <div class="style-button" title="Run">
+                    <i class="fas fa-play" style="color: #00ff00;"></i>
+                </div>
+            </div> -->
+            <div class="style-group" style="margin-left: 20px;">
+                <div class="style-button" id="code" title="Extract code">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+            </div>
+            <div class="style-group" id="analyze">
+                <div class="style-button" title="Analyze">
+                    <i class="fa-solid fa-circle-question widget-icon"></i>
+                </div>
+            </div>
+
+            <!-- <div class="style-group">
+                <div class="style-button" title="Run_on_Device">
+                    <i class="fas fa-play" style="color: #4f46e5;"></i>
+                </div>
+            </div> -->
+
+        </div>
+
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-area">
+        <!-- Left Sidebar - Widgets -->
+        <div class="left-sidebar">
+            <!-- Elements Panel -->
+            <div class="elements-panel">
+                <div class="widget-category">
+                    <span>Elements</span>
+                </div>
+                <div class="widget-list">
+                    <!-- Container Elements -->
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-square-full widget-icon"></i>
+                        <span>Div</span>
+                    </div>
+                    <!-- <div class="widget-item" draggable="true">
+                        <i class="fas fa-layer-group widget-icon"></i>
+                        <span>Section</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-newspaper widget-icon"></i>
+                        <span>Article</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-bars widget-icon"></i>
+                        <span>Nav</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-window-maximize widget-icon"></i>
+                        <span>Header</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-window-minimize widget-icon"></i>
+                        <span>Footer</span>
+                    </div> -->
+
+                    <!-- Form Elements -->
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-square widget-icon"></i>
+                        <span>Button</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-keyboard widget-icon"></i>
+                        <span>Text Field</span>
+                    </div>
+                    <!-- get it back soon -->
+                    <!-- <div class="widget-item" draggable="true">
+                        <i class="fas fa-paragraph widget-icon"></i>
+                        <span>Text Area</span>
+                    </div> -->
+                    <div class="widget-item" draggable="true">
+                        <i class="far fa-check-square widget-icon"></i>
+                        <span>Checkbox</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="far fa-dot-circle widget-icon"></i>
+                        <span>Radio</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-caret-square-down widget-icon"></i>
+                        <span>Select</span>
+                    </div>
+                    <!-- <div class="widget-item" draggable="true">
+                        <i class="fas fa-list-ul widget-icon"></i>
+                        <span>Datalist</span>
+                    </div> -->
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-calendar-alt widget-icon"></i>
+                        <span>Date Input</span>
+                    </div>
+
+                    <!-- Text Elements -->
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-heading widget-icon"></i>
+                        <span>Heading</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-tag widget-icon"></i>
+                        <span>Label</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-link widget-icon"></i>
+                        <span>link</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-font widget-icon"></i>
+                        <span>Paragraph</span>
+                    </div>
+                    <!-- <div class="widget-item" draggable="true">
+                        <i class="fas fa-quote-right widget-icon"></i>
+                        <span>Blockquote</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-code widget-icon"></i>
+                        <span>Code</span>
+                    </div> -->
+
+                    <!-- List Elements -->
+                    <!-- <div class="widget-item" draggable="true">
+                        <i class="fas fa-list-ul widget-icon"></i>
+                        <span>Unordered List</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-list-ol widget-icon"></i>
+                        <span>Ordered List</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-th-list widget-icon"></i>
+                        <span>Definition List</span>
+                    </div> -->
+
+                    <!-- Media Elements -->
+                    <div class="widget-item" draggable="true">
+                        <i class="far fa-image widget-icon"></i>
+                        <span>Image</span>
+                    </div>
+                    <!-- <div class="widget-item" draggable="true">
+                        <i class="fas fa-video widget-icon"></i>
+                        <span>Video</span>
+                    </div>
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-volume-up widget-icon"></i>
+                        <span>Audio</span>
+                    </div> -->
+                    <!-- <div class="widget-item" draggable="true">
+                        <i class="fas fa-film widget-icon"></i>
+                        <span>iFrame</span>
+                    </div> -->
+
+                    <!-- Table Elements -->
+                    <!-- <div class="widget-item" draggable="true">
+                        <i class="fas fa-table widget-icon"></i>
+                        <span>Table</span>
+                    </div> -->
+                    <div class="widget-item" draggable="true">
+                        <i class="fas fa-solid fa-clipboard-list widget-icon"></i>
+                        <span>Option</span>
+                    </div>
+                </div>
+                <!-- <div class="target" id="target">target</div> -->
+            </div>
+        </div>
+
+        <!-- Design Area -->
+        <div class="design-area">
+            <!-- Device selector (keep existing) -->
+            <div class="devices-container">
+                <div class="devices">
+                    <div class="devices-scroll-wrapper">
+                        <div class="devices-inner" id="devices_area">
+                            <!-- <div class="device active" id="device_active">
+                                <span class="device-name" id="iphone_15_pro">iphone_15_pro</span>
+                                <button class="close-device" id="close_device"><i class="fas fa-times"
+                                        id="delete_icon"></i></button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <select class="add-device" id="add_device">
+                    <optgroup id="phones" label="Phones">
+                        <option value="iphone_15_pro">iPhone 15 / 15 Pro (393×852)</option>
+                        <option value="iphone_15_plus">iPhone 15 Plus / Pro Max (430×932)</option>
+                        <option value="iphone_14">iPhone 14 / 13 / 13 Pro (390×844)</option>
+                        <option value="iphone_se">iPhone SE (2022) (375×667)</option>
+                        <option value="pixel">Pixel 6 / 7 / 8 (412×915)</option>
+                        <option value="galaxy_s23">Galaxy S23 / S22 (360×780)</option>
+                        <option value="galaxy_s23_ultra">Galaxy S23 Ultra (412×915)</option>
+                        <option value="galaxy_z_flip">Galaxy Z Flip 5 (412×1004)</option>
+                    </optgroup>
+                    <optgroup id="tablets" label="Tablets">
+                        <option value="ipad">iPad (768×1024)</option>
+                        <option value="ipad_pro_11">iPad Pro 11" (834×1194)</option>
+                        <option value="ipad_pro_12">iPad Pro 12.9" (1024×1366)</option>
+                        <option value="galaxy_tab_s9">Galaxy Tab S9 (800×1280)</option>
+                    </optgroup>
+                    <optgroup id="desktops" label="Laptops & Desktops">
+                        <option value="desktop_1280">Desktop (1280×800)</option>
+                        <option value="desktop_1366">Desktop (1366×768)</option>
+                        <option value="desktop_1440">Desktop (1440×900)</option>
+                        <!-- <option value="desktop_1536">Desktop (1536×864)</option> -->
+                        <!-- <option value="desktop_1920">Desktop (1920×1080)</option> -->
+                    </optgroup>
+                </select>
+            </div>
+
+            <!-- Clean design area - back to original with nice grid -->
+            <div class="area_father" id="area_father">
+                <div class="mainarea" id="mainarea">
+                    <div class="design-page canvas-element" id="design_page"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar - Properties -->
+        <div class="right-sidebar">
+            <div class="properties-panel">
+                <!-- HTML attributes -->
+                <div class="property-group">
+                    <div class="property-title" class="Uiexpert_style" id="property_group0">
+                        <span>attributes</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <!-- Common HTML Attributes -->
+                        <div class="property-item">
+                            <label>ID</label>
+                            <input type="text" class="Uiexpert_style" id="id" placeholder="Enter element ID">
+                        </div>
+
+                        <div class="property-item">
+                            <label>Class</label>
+                            <input type="text" class="Uiexpert_style" id="classname"
+                                placeholder="Enter CSS classes (space-separated)">
+                        </div>
+
+                        <div class="property-item">
+                            <label>For</label>
+                            <input type="text" class="Uiexpert_style" id="for" placeholder="Target element ID">
+                        </div>
+
+                        <div class="property-item">
+                            <label>Text Content</label>
+                            <textarea class="Uiexpert_style" id="textContent" placeholder="Enter text content"
+                                rows="2"></textarea>
+                        </div>
+
+                        <div class="property-item">
+                            <label>Title</label>
+                            <input type="text" class="Uiexpert_style" id="title" placeholder="Tooltip text">
+                        </div>
+
+                        <div class="property-item">
+                            <label>Alt Text</label>
+                            <input type="text" class="Uiexpert_style" id="alt"
+                                placeholder="Alternative text (for images)">
+                        </div>
+
+                        <div class="property-item">
+                            <label>Name</label>
+                            <input type="text" class="Uiexpert_style" id="name" placeholder="Element name">
+                        </div>
+
+                        <div class="property-item">
+                            <label>Value</label>
+                            <input type="text" class="Uiexpert_style" id="value" placeholder="Element value">
+                        </div>
+
+                        <div class="property-item">
+                            <label>Placeholder</label>
+                            <input type="text" class="Uiexpert_style" id="placeholder" placeholder="Placeholder text">
+                        </div>
+
+                        <div class="property-grid">
+                            <!-- <div class="property-grid-item">
+                                <label>Type</label>
+                                <select class="Uiexpert_style" id="type">
+                                    <option value="">Select type</option>
+                                    <option value="text">text</option>
+                                    <option value="email">email</option>
+                                    <option value="password">password</option>
+                                    <option value="number">number</option>
+                                    <option value="tel">tel</option>
+                                    <option value="url">url</option>
+                                    <option value="date">date</option>
+                                    <option value="time">time</option>
+                                    <option value="file">file</option>
+                                    <option value="hidden">hidden</option>
+                                    <option value="submit">submit</option>
+                                    <option value="button">button</option>
+                                    <option value="reset">reset</option>
+                                    <option value="checkbox">checkbox</option>
+                                    <option value="radio">radio</option>
+                                </select>
+                            </div> -->
+                            <div class="property-grid-item">
+                                <label>Target</label>
+                                <select class="Uiexpert_style" id="target">
+                                    <option value="">Select target</option>
+                                    <option value="_self">_self</option>
+                                    <option value="_blank">_blank</option>
+                                    <option value="_parent">_parent</option>
+                                    <option value="_top">_top</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="property-item">
+                            <label>Href</label>
+                            <input type="text" class="Uiexpert_style" id="href" placeholder="URL or link destination">
+                        </div>
+
+                        <div class="property-item">
+                            <label>Src</label>
+                            <input type="text" class="Uiexpert_style" id="src"
+                                placeholder="Source URL (for images, videos, etc.)">
+                        </div>
+
+                        <!-- <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Width</label>
+                                <input type="number" class="Uiexpert_style" id="att_width" placeholder="Width attribute">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Height</label>
+                                <input type="number" class="Uiexpert_style" id="att_height" placeholder="Height attribute">
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Min</label>
+                                <input type="number" class="Uiexpert_style" id="min" placeholder="Minimum value">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Max</label>
+                                <input type="number" class="Uiexpert_style" id="max" placeholder="Maximum value">
+                            </div>
+                        </div> -->
+
+                        <div class="property-grid">
+                            <!-- <div class="property-grid-item">
+                                <label>Step</label>
+                                <input type="number" class="Uiexpert_style" id="step" placeholder="Step value">
+                            </div> -->
+                            <div class="property-grid-item">
+                                <label>Maxlength</label>
+                                <input type="number" class="Uiexpert_style" id="maxlength" placeholder="Max characters">
+                            </div>
+                        </div>
+
+                        <!-- Boolean Attributes -->
+                        <div class="property-item">
+                            <label>Boolean Attributes</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="required">
+                                    <span>Required</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="disabled">
+                                    <span>Disabled</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="readonly">
+                                    <span>Readonly</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="checked">
+                                    <span>Checked</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="selected">
+                                    <span>Selected</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="multiple">
+                                    <span>Multiple</span>
+                                </label>
+                                <!-- <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="autofocus">
+                                    <span>Autofocus</span>
+                                </label> -->
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="autoplay">
+                                    <span>Autoplay</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="controls">
+                                    <span>Controls</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="loop">
+                                    <span>Loop</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked="false" class="Uiexpert_style" id="muted">
+                                    <span>Muted</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Data Attributes -->
+                        <!-- <div class="property-item">
+                            <label>Data Attributes</label>
+                            id="data-attributes-container"
+                            <div class="data-attributes-container" >
+                                <div class="data-attribute-row">
+                                    <input class="Uiexpert_style" id="data_name" type="text" placeholder="data-name" class="data-name">
+                                    <input class="Uiexpert_style" id="data_value" type="text" placeholder="value" class="data-value">
+                                    <button type="button" class="remove-data-attr" title="Remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="add-data-attr" id="add-data-attr">
+                                <i class="fas fa-plus"></i> Add Data Attribute
+                            </button>
+                        </div> -->
+
+                        <!-- Custom Attributes -->
+                        <!-- <div class="property-item">
+                            <label>Custom Attributes</label>
+                            id="custom-attributes-container"
+                            <div class="custom-attributes-container" >
+                                <div class="custom-attribute-row">
+                                    <input class="Uiexpert_style" id="custom_name" type="text" placeholder="attribute name" class="custom-name">
+                                    <input class="Uiexpert_style" id="custom_value" type="text" placeholder="value" class="custom-value">
+                                    <button type="button" class="remove-custom-attr" title="Remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="add-custom-attr" id="add-custom-attr">
+                                <i class="fas fa-plus"></i> Add Custom Attribute
+                            </button>
+                        </div> -->
+
+                        <!-- ARIA Attributes for Accessibility -->
+                        <!-- <div class="property-item">
+                            <label>ARIA Attributes</label>
+                            <div class="property-grid">
+                                <div class="property-grid-item">
+                                    <label>aria-label</label>
+                                    <input type="text" id="aria-label" placeholder="Accessible label">
+                                </div>
+                                <div class="property-grid-item">
+                                    <label>aria-describedby</label>
+                                    <input type="text" id="aria-describedby" placeholder="Element ID">
+                                </div>
+                            </div>
+                            <div class="property-grid">
+                                <div class="property-grid-item">
+                                    <label>role</label>
+                                    <select id="role">
+                                        <option value="">Select role</option>
+                                        <option value="button">button</option>
+                                        <option value="link">link</option>
+                                        <option value="heading">heading</option>
+                                        <option value="banner">banner</option>
+                                        <option value="navigation">navigation</option>
+                                        <option value="main">main</option>
+                                        <option value="complementary">complementary</option>
+                                        <option value="contentinfo">contentinfo</option>
+                                        <option value="dialog">dialog</option>
+                                        <option value="alert">alert</option>
+                                        <option value="tab">tab</option>
+                                        <option value="tabpanel">tabpanel</option>
+                                    </select>
+                                </div>
+                                <div class="property-grid-item">
+                                    <label>tabindex</label>
+                                    <input type="number" id="tabindex" placeholder="Tab order">
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Apply/Reset Buttons -->
+                        <!-- <div class="property-item">
+                            <div class="attribute-actions">
+                                <button type="button" class="apply-attributes" id="apply-attributes">
+                                    <i class="fas fa-check"></i> Apply Changes
+                                </button>
+                                <button type="button" class="reset-attributes" id="reset-attributes">
+                                    <i class="fas fa-undo"></i> Reset
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Layout & Position -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group1">
+                        <span>Layout & Position</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>Display</label>
+                            <select class="Uiexpert_style" id="display">
+                                <option value="block">block</option>
+                                <option value="inline">inline</option>
+                                <option value="inline-block">inline-block</option>
+                                <option value="flex">flex</option>
+                                <option value="grid">grid</option>
+                                <option value="none">none</option>
+                            </select>
+
+                        </div>
+                        <div class="property-item">
+                            <label>Position</label>
+                            <select class="Uiexpert_style" id="position">
+                                <option value="static">static</option>
+                                <option value="relative">relative</option>
+                                <option value="absolute">absolute</option>
+                                <option value="fixed">fixed</option>
+                                <option value="sticky">sticky</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Right</label>
+                                <input class="Uiexpert_style" id="right" type="number" placeholder="auto">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Top</label>
+                                <input class="Uiexpert_style" id="top" type="number" placeholder="auto">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Bottom</label>
+                                <input class="Uiexpert_style" id="bottom" type="number" placeholder="auto">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Left</label>
+                                <input class="Uiexpert_style" id="left" type="number" placeholder="auto">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Width</label>
+                                <input class="Uiexpert_style" id="width" type="number" value="auto">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Height</label>
+                                <input class="Uiexpert_style" id="height" type="number" value="auto">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Min Width</label>
+                                <input class="Uiexpert_style" id="min_width" type="number" placeholder="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Max Width</label>
+                                <input class="Uiexpert_style" id="max_width" type="number" placeholder="none">
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>Z-Index</label>
+                            <input class="Uiexpert_style" id="z_index" type="number" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flexbox Properties -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group2">
+                        <span>Flexbox</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>Flex Direction</label>
+                            <select class="Uiexpert_style" id="flex_direction">
+                                <option value="row">row</option>
+                                <option value="column">column</option>
+                                <option value="row-reverse">row-reverse</option>
+                                <option value="column-reverse">column-reverse</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Justify Content</label>
+                            <select class="Uiexpert_style" id="flex_justify_content">
+                                <option value="flex-start">flex-start</option>
+                                <option value="center">center</option>
+                                <option value="flex-end">flex-end</option>
+                                <option value="space-between">space-between</option>
+                                <option value="space-around">space-around</option>
+                                <option value="space-evenly">space-evenly</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Align Items</label>
+                            <select class="Uiexpert_style" id="flex_align_items">
+                                <option value="stretch">stretch</option>
+                                <option value="flex-start">flex-start</option>
+                                <option value="center">center</option>
+                                <option value="flex-end">flex-end</option>
+                                <option value="baseline">baseline</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Flex Grow</label>
+                                <input class="Uiexpert_style" id="flex_grow" type="number" value="0" min="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Flex Shrink</label>
+                                <input class="Uiexpert_style" id="flex_shrink" type="number" value="1" min="0">
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>Flex Wrap</label>
+                            <select class="Uiexpert_style" id="flex_wrap">
+                                <option value="nowrap">nowrap</option>
+                                <option value="wrap">wrap</option>
+                                <option value="wrap-reverse">wrap-reverse</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Gap</label>
+                            <input class="Uiexpert_style" id="gap" type="number" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spacing & Margins -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group3">
+                        <span>Spacing</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="spacing-visual">
+                            <div class="spacing-box">
+                                <div class="margin-area">
+                                    <label>Margin</label>
+                                    <div class="margin-inputs">
+                                        <input id="margin_top" type="number" placeholder="0" class="margin-top"
+                                            class="Uiexpert_style" title="Margin Top">
+                                        <input id="margin_right" type="number" placeholder="0" class="margin-right"
+                                            class="Uiexpert_style" title="Margin Right">
+                                        <input id="margin_bottom" type="number" placeholder="0" class="margin-bottom"
+                                            class="Uiexpert_style" title="Margin Bottom">
+                                        <input id="margin_left" type="number" placeholder="0" class="margin-left"
+                                            class="Uiexpert_style" title="Margin Left">
+                                    </div>
+                                    <div class="padding-area">
+                                        <label>Padding</label>
+                                        <div class="padding-inputs">
+                                            <input id="padding_top" type="number" placeholder="0" class="padding-top"
+                                                class="Uiexpert_style" title="Padding Top">
+                                            <input id="padding_right" type="number" placeholder="0"
+                                                class="padding-right" class="Uiexpert_style" title="Padding Right">
+                                            <input id="padding_bottom" type="number" placeholder="0"
+                                                class="padding-bottom" class="Uiexpert_style" title="Padding Bottom">
+                                            <input id="padding_left" type="number" placeholder="0" class="padding-left"
+                                                class="Uiexpert_style" title="Padding Left">
+                                        </div>
+                                        <!-- <div class="content-area-visual">Content</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Background & Colors -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group4">
+                        <span>Background & Colors</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <div class="color-input-group">
+                                <label>Background Color</label>
+                                <input class="Uiexpert_style" class="color" id="background_color" type="color"
+                                    value="#ffffff" style="border-radius: 20%; margin-left: 20px;">
+                                <!-- <input class="Uiexpert_style" id="color_text" type="text" value="#ffffff" class="color-text"> -->
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>Background Image</label>
+                            <input class="Uiexpert_style" id="background_image" type="text" placeholder="url() or none">
+                        </div>
+                        <div class="property-item">
+                            <label>Background Size</label>
+                            <select class="Uiexpert_style" id="background_size">
+                                <option value="auto">auto</option>
+                                <option value="cover">cover</option>
+                                <option value="contain">contain</option>
+                                <option value="100% 100%">100% 100%</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Background Position</label>
+                            <select class="Uiexpert_style" id="background_position">
+                                <option value="center">center</option>
+                                <option value="top">top</option>
+                                <option value="bottom">bottom</option>
+                                <option value="left">left</option>
+                                <option value="right">right</option>
+                                <option value="top left">top left</option>
+                                <option value="top right">top right</option>
+                                <option value="bottom left">bottom left</option>
+                                <option value="bottom right">bottom right</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Background Repeat</label>
+                            <select class="Uiexpert_style" id="background_repeat">
+                                <option value="repeat">repeat</option>
+                                <option value="no-repeat">no-repeat</option>
+                                <option value="repeat-x">repeat-x</option>
+                                <option value="repeat-y">repeat-y</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Opacity</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="opacity" type="range" min="0" max="100" value="100">
+                                <span class="range-value">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gradiant -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group5">
+                        <span>Gradiant</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-grid">
+                        <div class="property-item" style="display: flex;align-items: center;">
+                            <input class="Uiexpert_style" id="gradiant_persent_from_1" type="number" placeholder="from"
+                                style="width: 75px; margin-left: 5px;">
+                            <input class="Uiexpert_style" id="gradiant_color1" class="Uiexpert_style" type="color"
+                                value="#ffffff" style="margin-left: 10px;">
+                            <input class="Uiexpert_style" id="gradiant_persent_to_1" type="number" placeholder="to"
+                                style="width: 75px; margin-left: 10px;">
+                        </div>
+                        <div class="property-item" style="display: flex;align-items: center;">
+                            <input class="Uiexpert_style" id="gradiant_persent_from_2" type="number" placeholder="from"
+                                style="width: 75px; margin-left: 5px;">
+                            <input class="Uiexpert_style" id="gradiant_color2" class="Uiexpert_style" type="color"
+                                value="#ffffff" style="margin-left: 10px;">
+                            <input class="Uiexpert_style" id="gradiant_persent_to_2" type="number" placeholder="to"
+                                style="width: 75px; margin-left: 10px;">
+                        </div>
+                        <div class="property-item" style="display: flex;align-items: center;">
+                            <input class="Uiexpert_style" id="gradiant_persent_from_3" type="number" placeholder="from"
+                                style="width: 75px; margin-left: 5px;">
+                            <input class="Uiexpert_style" id="gradiant_color3" class="Uiexpert_style" type="color"
+                                value="#ffffff" style="margin-left: 10px;">
+                            <input class="Uiexpert_style" id="gradiant_persent_to_3" type="number" placeholder="to"
+                                style="width: 75px; margin-left: 10px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Border & Outline -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group6">
+                        <!-- <span>Border & Outline</span> -->
+                        <span>Border & Shadow</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <!-- complete border -->
+                        <div class="property-item">
+                            <label>Border Style</label>
+                            <select class="Uiexpert_style" id="border_style">
+                                <option value="none">none</option>
+                                <option value="solid">solid</option>
+                                <option value="dashed">dashed</option>
+                                <option value="dotted">dotted</option>
+                                <option value="double">double</option>
+                                <option value="groove">groove</option>
+                                <option value="ridge">ridge</option>
+                                <option value="inset">inset</option>
+                                <option value="outset">outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Border Width</label>
+                                <input class="Uiexpert_style" id="border_width" type="number" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Border Color</label>
+                                <input class="Uiexpert_style" id="border_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Border Radius</label>
+                                <input class="Uiexpert_style" id="border_radius" type="number" value="0">
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- right border -->
+                        <!-- <div class="property-item">
+                            <label>Right Border Style</label>
+                            <select class="Uiexpert_style" id="right_border_style">
+                                <option value="none">none</option>
+                                <option value="solid">solid</option>
+                                <option value="dashed">dashed</option>
+                                <option value="dotted">dotted</option>
+                                <option value="double">double</option>
+                                <option value="groove">groove</option>
+                                <option value="ridge">ridge</option>
+                                <option value="inset">inset</option>
+                                <option value="outset">outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Right Border Width</label>
+                                <input class="Uiexpert_style" id="right_border_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Right Border Color</label>
+                                <input class="Uiexpert_style" id="right_border_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Top Right Radius</label>
+                                <input class="Uiexpert_style" id="top_right_border_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr> -->
+
+                        <!-- top border 
+                         <div class="property-item">
+                            <label>Top Border Style</label>
+                            <select class="Uiexpert_style" id="top_border_style">
+                                <option value="none">none</option>
+                                <option value="solid">solid</option>
+                                <option value="dashed">dashed</option>
+                                <option value="dotted">dotted</option>
+                                <option value="double">double</option>
+                                <option value="groove">groove</option>
+                                <option value="ridge">ridge</option>
+                                <option value="inset">inset</option>
+                                <option value="outset">outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Top Border Width</label>
+                                <input class="Uiexpert_style" id="top_border_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Top Border Color</label>
+                                <input class="Uiexpert_style" id="top_border_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Top left Radius</label>
+                                <input class="Uiexpert_style" id="top_left_border_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- left border -->
+                        <!--
+                        <div class="property-item">
+                            <label>Left Border Style</label>
+                            <select class="Uiexpert_style" id="left_border_style">
+                                <option value="none">none</option>
+                                <option value="solid">solid</option>
+                                <option value="dashed">dashed</option>
+                                <option value="dotted">dotted</option>
+                                <option value="double">double</option>
+                                <option value="groove">groove</option>
+                                <option value="ridge">ridge</option>
+                                <option value="inset">inset</option>
+                                <option value="outset">outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Left Border Width</label>
+                                <input class="Uiexpert_style" id="left_border_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Left Border Color</label>
+                                <input class="Uiexpert_style" id="left_border_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Bottom Left Radius</label>
+                                <input class="Uiexpert_style" id="bottom_left_border_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr> -->
+
+                        <!-- bottom border -->
+                        <!-- <div class="property-item">
+                            <label>Bottom Border Style</label>
+                            <select class="Uiexpert_style" id="bottom_border_style">
+                                <option value="none">none</option>
+                                <option value="solid">solid</option>
+                                <option value="dashed">dashed</option>
+                                <option value="dotted">dotted</option>
+                                <option value="double">double</option>
+                                <option value="groove">groove</option>
+                                <option value="ridge">ridge</option>
+                                <option value="inset">inset</option>
+                                <option value="outset">outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Bottom Border Width</label>
+                                <input class="Uiexpert_style" id="bottom_border_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Bottom Border Color</label>
+                                <input class="Uiexpert_style" id="bottom_border_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Bottom right Radius</label>
+                                <input class="Uiexpert_style" id="bottom_right_border_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr> -->
+
+
+
+                        <!-- outline -->
+                        <!-- complete outline
+                        <div class="property-item">
+                            <label>Outline Style</label>
+                            <select class="Uiexpert_style" id="outline_style">
+                                <option>none</option>
+                                <option>solid</option>
+                                <option>dashed</option>
+                                <option>dotted</option>
+                                <option>double</option>
+                                <option>groove</option>
+                                <option>ridge</option>
+                                <option>inset</option>
+                                <option>outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Outline Width</label>
+                                <input class="Uiexpert_style" id="outline_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Outline Color</label>
+                                <input class="Uiexpert_style" id="outline_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Outline Radius</label>
+                                <input class="Uiexpert_style" id="outline_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr>
+
+
+                        right Outline
+                        <div class="property-item">
+                            <label>Right Outline Style</label>
+                            <select class="Uiexpert_style" id="right_outline_style">
+                                <option>none</option>
+                                <option>solid</option>
+                                <option>dashed</option>
+                                <option>dotted</option>
+                                <option>double</option>
+                                <option>groove</option>
+                                <option>ridge</option>
+                                <option>inset</option>
+                                <option>outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Right Outline Width</label>
+                                <input class="Uiexpert_style" id="right_outline_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Right Outline Color</label>
+                                <input class="Uiexpert_style" id="right_outline_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Right Outline Radius</label>
+                                <input class="Uiexpert_style" id="right_outline_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr>
+
+                        top Outline
+                        <div class="property-item">
+                            <label>Top Outline Style</label>
+                            <select class="Uiexpert_style" id="top_outline_style">
+                                <option>none</option>
+                                <option>solid</option>
+                                <option>dashed</option>
+                                <option>dotted</option>
+                                <option>double</option>
+                                <option>groove</option>
+                                <option>ridge</option>
+                                <option>inset</option>
+                                <option>outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Top Outline Width</label>
+                                <input class="Uiexpert_style" id="top_outline_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Top Outline Color</label>
+                                <input class="Uiexpert_style" id="top_outline_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Top Outline Radius</label>
+                                <input class="Uiexpert_style" id="top_outline_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr>
+
+                        left Outline
+                        <div class="property-item">
+                            <label>Left Outline Style</label>
+                            <select class="Uiexpert_style" id="left_outline_style">
+                                <option>none</option>
+                                <option>solid</option>
+                                <option>dashed</option>
+                                <option>dotted</option>
+                                <option>double</option>
+                                <option>groove</option>
+                                <option>ridge</option>
+                                <option>inset</option>
+                                <option>outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Left Outline Width</label>
+                                <input class="Uiexpert_style" id="left_outline_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Left Outline Color</label>
+                                <input class="Uiexpert_style" id="left_outline_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Left Outline Radius</label>
+                                <input class="Uiexpert_style" id="left_outline_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr>
+
+                        bottom Outline
+                        <div class="property-item">
+                            <label>Bottom Outline Style</label>
+                            <select class="Uiexpert_style" id="bottom_outline_style">
+                                <option>none</option>
+                                <option>solid</option>
+                                <option>dashed</option>
+                                <option>dotted</option>
+                                <option>double</option>
+                                <option>groove</option>
+                                <option>ridge</option>
+                                <option>inset</option>
+                                <option>outset</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Bottom Outline Width</label>
+                                <input class="Uiexpert_style" id="bottom_outline_width" type="text" value="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Bottom Outline Color</label>
+                                <input class="Uiexpert_style" id="bottom_outline_color" type="color" value="#000000">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Bottom Outline Radius</label>
+                                <input class="Uiexpert_style" id="bottom_outline_radius" type="text" value="0">
+                            </div>
+                        </div>
+                        <hr> -->
+
+                        <!-- shadow -->
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>shadow color</label>
+                                <input class="shadow_color" class="Uiexpert_style" id="shadow_color" type="color"
+                                    value="#ffffff">
+                            </div>
+
+                            <div class="property-grid-item">
+                                <label>shadow x</label>
+                                <input type="number" id="shadow_x" class="Uiexpert_style" placeholder="shadow x">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>shadow y</label>
+                                <input type="number" id="shadow_y" class="Uiexpert_style" placeholder="shadow y">
+                            </div>
+
+                            <div class="property-grid-item">
+                                <label>shadow blur</label>
+                                <input type="number" id="shadow_blur" class="Uiexpert_style" placeholder="shadow blur">
+                            </div>
+                            <div class="property-item">
+                                <label>shadow opacity</label>
+                                <div class="range-input-group">
+                                    <input class="Uiexpert_style" id="shadow_opacity" type="range" min="0" max="100"
+                                        value="100">
+                                    <span class="range-value">100%</span>
+                                </div>
+                            </div>
+                            <div class="property-item">
+                                <label class="checkbox-label">
+                                    <input id="shadow_inset" type="checkbox" checked="false" class="Uiexpert_style">
+                                    <span>shadow inset</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- <div class="property-item">
+                            <label>Outline</label>
+                            <input type="text" placeholder="none">
+                        </div>
+                        <div class="property-item">
+                            <label>Box Shadow</label>
+                            <input type="text" placeholder="none">
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Typography -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group7">
+                        <span>Typography</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>Font Family</label>
+                            <select class="style-select Uiexpert_style" title="Font Family" id="font_family">
+                                <option value="Arial, sans-serif">Arial</option>
+                                <option value="Helvetica, sans-serif">Helvetica</option>
+                                <option value="'Times New Roman', serif">Times New Roman</option>
+                                <option value="Georgia, serif">Georgia</option>
+                                <option value="Verdana, sans-serif">Verdana</option>
+                                <option value="'Courier New', monospace">Courier New</option>
+                                <option value="Tahoma, sans-serif">Tahoma</option>
+                                <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                                <option value="Impact, sans-serif">Impact</option>
+                                <option value="'Lucida Console', monospace">Lucida Console</option>
+                                <option value="'Lucida Sans Unicode', sans-serif">Lucida Sans Unicode</option>
+                                <option value="Palatino, serif">Palatino</option>
+                                <option value="Garamond, serif">Garamond</option>
+                                <option value="Cambria, serif">Cambria</option>
+                                <option value="Calibri, sans-serif">Calibri</option>
+                                <option value="'Segoe UI', sans-serif">Segoe UI</option>
+                            </select>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Font Size</label>
+                                <input class="Uiexpert_style" id="font_size" type="number" placeholder="normal">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Font Weight</label>
+                                <select class="Uiexpert_style" id="font_weight">
+                                    <option value="normal">normal</option>
+                                    <option value="bold">bold</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="500">500</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <div class="color-input-group">
+                                <label>Font Color</label>
+                                <input class="Uiexpert_style" id="font_color" type="color" value="#000000"
+                                    style="border-radius: 20%; margin-left: 20px;">
+                                <!-- <input type="text" value="#000000" class="color-text"> -->
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-item">
+                                <label>Line Height</label>
+                                <input class="Uiexpert_style" id="line_height" type="number" placeholder="1.5">
+                            </div>
+                            <div class="property-item">
+                                <label>Letter Spacing</label>
+                                <input class="Uiexpert_style" id="letter_spacing" type="number" placeholder="normal">
+                            </div>
+                            <!-- </div> -->
+                            <div class="property-item">
+                                <label>Text Align</label>
+                                <select class="Uiexpert_style" id="text_align">
+                                    <option value="left">left</option>
+                                    <option value="center">center</option>
+                                    <option value="right">right</option>
+                                    <option value="justify">justify</option>
+                                </select>
+                            </div>
+                            <div class="property-item">
+                                <label>Text Decoration</label>
+                                <select class="Uiexpert_style" id="text_decoration">
+                                    <option value="none">none</option>
+                                    <option value="underline">underline</option>
+                                    <option value="overline">overline</option>
+                                    <option value="line-through">line-through</option>
+                                </select>
+                            </div>
+                            <div class="property-item">
+                                <label>Text Transform</label>
+                                <select class="Uiexpert_style" id="text_transform">
+                                    <option value="none">none</option>
+                                    <option value="uppercase">uppercase</option>
+                                    <option value="lowercase">lowercase</option>
+                                    <option value="capitalize">capitalize</option>
+                                </select>
+                            </div>
+                            <div class="property-item">
+                                <label>Word Spacing</label>
+                                <input class="Uiexpert_style" id="word_spacing" type="number" placeholder="normal">
+                            </div>
+
+                            <!-- text shadow -->
+                            <div class="property-item">
+                                <div class="color-input-group">
+                                    <label>text shadow color</label>
+                                    <input class="Uiexpert_style" id="text_shadow_color" type="color" value="#000000"
+                                        style="border-radius: 20%; margin-left: 20px;">
+                                </div>
+                            </div>
+                            <div class="property-item">
+                                <label>text shadow x</label>
+                                <input type="number" id="text_shadow_x" class="Uiexpert_style" placeholder="shadow x">
+                            </div>
+                            <div class="property-item">
+                                <label>text shadow y</label>
+                                <input type="number" id="text_shadow_y" class="Uiexpert_style" placeholder="shadow y">
+                            </div>
+                            <div class="property-item">
+                                <label>text shadow blur</label>
+                                <input type="number" id="text_shadow_blur" class="Uiexpert_style"
+                                    placeholder="shadow blur">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Effects & Transforms -->
+                <!-- <div class="property-group">
+                    <div class="property-title" id="property_group8">
+                        <span>Effects & Transforms</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>Transform</label>
+                            <input type="text" placeholder="none">
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Rotate</label>
+                                <input type="text" placeholder="0deg">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Scale</label>
+                                <input type="text" placeholder="1">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Skew</label>
+                                <input type="text" placeholder="0deg">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Translate</label>
+                                <input type="text" placeholder="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Origin</label>
+                                <input type="text" placeholder="50% 50%">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Perspective</label>
+                                <input type="text" placeholder="none">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Perspective Origin</label>
+                                <input type="text" placeholder="50% 50%">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Translate X</label>
+                                <input type="text" placeholder="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Translate Y</label>
+                                <input type="text" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>Transform Origin</label>
+                            <select>
+                                <option>center</option>
+                                <option>top</option>
+                                <option>bottom</option>
+                                <option>left</option>
+                                <option>right</option>
+                                <option>top left</option>
+                                <option>top right</option>
+                                <option>bottom left</option>
+                                <option>bottom right</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Filter</label>
+                            <input type="text" placeholder="none">
+                        </div>
+                        <div class="property-item">
+                            <label>Backdrop Filter</label>
+                            <input type="text" placeholder="none">
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- filter -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group8">
+                        <span>Effects & Transforms</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>filter blur</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="filter_blur" type="range" min="0" max="100" value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>filter brightness</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="filter_brightness" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>filter contrast</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="filter_contrast" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>filter grayscale</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="filter_grayscale" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>filter sepia</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="filter_sepia" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>filter saturate</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="filter_saturate" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>filter shadow</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="filter_shadow" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>backdrop_filter blur</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="backdrop_filter_blur" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>backdrop_filter brightness</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="backdrop_filter_brightness" type="range" min="0"
+                                    max="100" value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>backdrop_filter contrast</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="backdrop_filter_contrast" type="range" min="0"
+                                    max="100" value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>backdrop_filter grayscale</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="backdrop_filter_grayscale" type="range" min="0"
+                                    max="100" value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>backdrop_filter sepia</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="backdrop_filter_sepia" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>backdrop_filter saturate</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="backdrop_filter_saturate" type="range" min="0"
+                                    max="100" value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>backdrop_filter shadow</label>
+                            <div class="range-input-group">
+                                <input class="Uiexpert_style" id="backdrop_filter_shadow" type="range" min="0" max="100"
+                                    value="0">
+                                <span class="range-value">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Animation & Transition -->
+                <!-- Transition only for now-->
+
+                <div class="property-group">
+                    <div class="property-title" id="property_group9">
+                        <!-- <span>Animation & Transition</span> -->
+                        <span>Transition</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>Transition</label>
+                            <input class="Uiexpert_style" id="transition" type="text" placeholder="none">
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Duration</label>
+                                <input class="Uiexpert_style" id="duration" type="number" placeholder="0s">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Timing Function</label>
+                                <select class="Uiexpert_style" id="timing_function">
+                                    <option value="ease">ease</option>
+                                    <option value="linear">linear</option>
+                                    <option value="ease-in">ease-in</option>
+                                    <option value="ease-out">ease-out</option>
+                                    <option value="ease-in-out">ease-in-out</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- <div class="property-item">
+                            <label>Animation</label>
+                            <input type="text" placeholder="none">
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Animation Duration</label>
+                                <input type="text" placeholder="0s">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Animation Delay</label>
+                                <input type="text" placeholder="0s">
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>Animation Fill Mode</label>
+                            <select>
+                                <option>none</option>
+                                <option>forwards</option>
+                                <option>backwards</option>
+                                <option>both</option>
+                            </select>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Overflow & Visibility -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group10">
+                        <span>Overflow & Visibility</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Overflow X</label>
+                                <select class="Uiexpert_style" id="overflow_x">
+                                    <option value="visible">visible</option>
+                                    <option value="hidden">hidden</option>
+                                    <option value="scroll">scroll</option>
+                                    <option value="auto">auto</option>
+                                </select>
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Overflow Y</label>
+                                <select class="Uiexpert_style" id="overflow_y">
+                                    <option value="visible">visible</option>
+                                    <option value="hidden">hidden</option>
+                                    <option value="scroll">scroll</option>
+                                    <option value="auto">auto</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>Visibility</label>
+                            <select class="Uiexpert_style" id="visibility">
+                                <option value="visible">visible</option>
+                                <option value="hidden">hidden</option>
+                                <option value="collapse">collapse</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Cursor</label>
+                            <select class="Uiexpert_style" id="cursor">
+                                <option value="auto">auto</option>
+                                <option value="pointer">pointer</option>
+                                <option value="text">text</option>
+                                <option value="move">move</option>
+                                <option value="not-allowed">not-allowed</option>
+                                <option value="grab">grab</option>
+                                <option value="grabbing">grabbing</option>
+                                <option value="crosshair">crosshair</option>
+                                <option value="help">help</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Pointer Events</label>
+                            <select class="Uiexpert_style" id="pointer_events">
+                                <option value="auto">auto</option>
+                                <option value="none">none</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>User Select</label>
+                            <select class="Uiexpert_style" id="user_select">
+                                <option value="auto">auto</option>
+                                <option value="none">none</option>
+                                <option value="text">text</option>
+                                <option value="all">all</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid Properties -->
+                <div class="property-group">
+                    <div class="property-title" id="property_group11">
+                        <span>CSS Grid</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>Grid Template Columns</label>
+                            <input class="Uiexpert_style" id="grid_template_columns" type="text" placeholder="none">
+                        </div>
+                        <div class="property-item">
+                            <label>Grid Template Rows</label>
+                            <input class="Uiexpert_style" id="grid_template_rows" type="text" placeholder="none">
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Grid Column</label>
+                                <input class="Uiexpert_style" id="grid_column" type="text" placeholder="auto">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Grid Row</label>
+                                <input class="Uiexpert_style" id="grid_row" type="text" placeholder="auto">
+                            </div>
+                        </div>
+                        <div class="property-grid">
+                            <div class="property-grid-item">
+                                <label>Grid Gap</label>
+                                <input class="Uiexpert_style" id="grid_gap" type="number" placeholder="0">
+                            </div>
+                            <div class="property-grid-item">
+                                <label>Grid Auto Flow</label>
+                                <select class="Uiexpert_style" id="grid_autoflow">
+                                    <option value="row">row</option>
+                                    <option value="column">column</option>
+                                    <option value="dense">dense</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="property-item">
+                            <label>Justify Items</label>
+                            <select class="Uiexpert_style" id="grid_justify_items">
+                                <option value="stretch">stretch</option>
+                                <option value="start">start</option>
+                                <option value="center">center</option>
+                                <option value="end">end</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Align Items</label>
+                            <select class="Uiexpert_style" id="grid_alain_items">
+                                <option value="stretch">stretch</option>
+                                <option value="start">start</option>
+                                <option value="center">center</option>
+                                <option value="end">end</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table Properties -->
+                <!-- <div class="property-group">
+                    <div class="property-title" id="property_group12">
+                        <span>Table Properties</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>Table Layout</label>
+                            <select class="Uiexpert_style" id="table_layout">
+                                <option value="auto">auto</option>
+                                <option value="fixed">fixed</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Border Spacing</label>
+                            <input class="Uiexpert_style" id="border_spacing" type="number" placeholder="0">
+                        </div>
+                        <div class="property-item">
+                            <label>Caption Side</label>
+                            <select class="Uiexpert_style" id="caption_side">
+                                <option value="top">top</option>
+                                <option value="bottom">bottom</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Empty Cells</label>
+                            <select class="Uiexpert_style" id="empty_cells">
+                                <option value="show">show</option>
+                                <option value="hide">hide</option>
+                            </select>
+                        </div>
+                        <div class="property-item">
+                            <label>Border Collapse</label>
+                            <select class="Uiexpert_style" id="border_collapse">
+                                <option value="separate">separate</option>
+                                <option value="collapse">collapse</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Custom Properties -->
+                <!-- <div class="property-group">
+                    <div class="property-title" id="property_group13">
+                        <span>Custom CSS</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-item">
+                            <label>Custom CSS</label>
+                            <textarea placeholder="Add custom CSS properties here..." rows="4"></textarea>
+                        </div>
+                        <div class="property-item">
+                            <label>CSS Variables</label>
+                            <textarea placeholder="--custom-property: value;" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- Add near your toolbar or bottom status bar -->
+        <div id="history_status" style="
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            display: none;
+            z-index: 10000;">
+            <span id="undo_count">Undo: 0</span> |
+            <span id="redo_count">Redo: 0</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
